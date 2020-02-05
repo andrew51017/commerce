@@ -20,6 +20,7 @@ use yii\db\ActiveQueryInterface;
  * @property bool $allGroups
  * @property bool $allPurchasables
  * @property float $baseDiscount
+ * @property string $baseDiscountType
  * @property string $code
  * @property DateTime $dateFrom
  * @property DateTime $dateTo
@@ -54,6 +55,14 @@ class Discount extends ActiveRecord
 
     const TYPE_ORIGINAL_SALEPRICE = 'original';
     const TYPE_DISCOUNTED_SALEPRICE = 'discounted';
+
+    const BASE_DISCOUNT_TYPE_VALUE = 'value';
+    const BASE_DISCOUNT_TYPE_PERCENT_TOTAL = 'percentTotal';
+    const BASE_DISCOUNT_TYPE_PERCENT_ITEMS = 'percentItems';
+
+    const CATEGORY_RELATIONSHIP_TYPE_SOURCE = 'sourceElement';
+    const CATEGORY_RELATIONSHIP_TYPE_TARGET = 'targetElement';
+    const CATEGORY_RELATIONSHIP_TYPE_BOTH = 'element';
 
     // Public Methods
     // =========================================================================

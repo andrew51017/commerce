@@ -470,6 +470,7 @@ class Discounts extends Component
         $record->purchaseQty = $model->purchaseQty;
         $record->maxPurchaseQty = $model->maxPurchaseQty;
         $record->baseDiscount = $model->baseDiscount;
+        $record->baseDiscountType = $model->baseDiscountType;
         $record->perItemDiscount = $model->perItemDiscount;
         $record->percentDiscount = $model->percentDiscount;
         $record->percentageOffSubject = $model->percentageOffSubject;
@@ -704,6 +705,7 @@ class Discounts extends Component
                 'discounts.purchaseQty',
                 'discounts.maxPurchaseQty',
                 'discounts.baseDiscount',
+                'discounts.baseDiscountType',
                 'discounts.perItemDiscount',
                 'discounts.percentDiscount',
                 'discounts.percentageOffSubject',
