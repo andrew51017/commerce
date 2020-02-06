@@ -12,6 +12,7 @@ use craft\commerce\base\Purchasable;
 use craft\commerce\base\PurchasableInterface;
 use craft\commerce\elements\Product;
 use craft\commerce\models\Discount;
+use craft\commerce\records\Discount as DiscountRecord;
 use craft\commerce\Plugin;
 use craft\elements\Category;
 use craft\helpers\ArrayHelper;
@@ -263,9 +264,9 @@ class DiscountsController extends BaseCpController
         $currencyName = $currency ? $currency->getCurrency() : '';
 
         $variables['baseDiscountTypes'] = [
-            DiscountRecord::BASE_DISCOUNT_TYPE_VALUE => Plugin::t($currencyName . ' value'),
-            DiscountRecord::BASE_DISCOUNT_TYPE_PERCENT_TOTAL => Plugin::t('Percent off order total (items + shipping)'),
-            DiscountRecord::BASE_DISCOUNT_TYPE_PERCENT_ITEMS => Plugin::t('Percent off order subtotal (items)'),
+            DiscountRecord::BASE_DISCOUNT_TYPE_VALUE => $currencyName . ' value',
+            DiscountRecord::BASE_DISCOUNT_TYPE_PERCENT_TOTAL => 'Percent off order total (items + shipping)',
+            DiscountRecord::BASE_DISCOUNT_TYPE_PERCENT_ITEMS => 'Percent off order subtotal (items)',
         ];
 
         $variables['categoryElementType'] = Category::class;
